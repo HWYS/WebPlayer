@@ -1,0 +1,56 @@
+﻿
+select {
+    line-height: 50px;
+    font: inherit;
+}
+
+option {
+    background: #6C757D;
+    color: #ffffff;
+    line-height: 50px;
+}
+
+.DropDownListStyle {
+    margin-top: 8px;
+    background-color: rebeccapurple;
+}
+
+.DropDownListItemStyle {
+    background-color: #eee;
+    margin: 8px;
+    padding: 8px;
+}
+
+.dropdown_item {
+    background: #6C757D;
+    color: #ffffff;
+    line-height: 50px;
+}
+
+    option:hover {
+        background: #000;
+        color: green;
+    }
+
+@media (max-width: 767px) {
+    #channelLogo {
+        display: none;
+    }
+
+    #player {
+        margin-top: 15px;
+    }
+}
+
+.button {
+    background-color: #555555; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
