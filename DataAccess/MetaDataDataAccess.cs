@@ -38,6 +38,7 @@ namespace Player.DataAccess
                         result.Add(model);
                     }
                 }
+                con.Close();
             }
             return result;
         }
@@ -64,6 +65,8 @@ namespace Player.DataAccess
                         return false;
                     }
                 }
+
+                con.Close();
             }
             return true;
         }

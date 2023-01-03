@@ -95,6 +95,7 @@
     <Content Include="CSS\Default.css" />
     <Content Include="CSS\Fonts.css" />
     <Content Include="CSS\Style.css" />
+    <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\logo.png" />
     <Content Include="AdminLogin.aspx" />
@@ -109,6 +110,13 @@
     <Compile Include="DataAccess\MetaDataDataAccess.cs" />
     <Compile Include="DataAccess\SettingDataAccess.cs" />
     <Compile Include="DataAccess\UserDataAccess.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -171,10 +179,6 @@
     <EmbeddedResource Include="App_Data\PlayerDb.sqlite">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <None Include="Dockerfile" />
-    <None Include=".dockerignore">
-      <DependentUpon>Dockerfile</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">

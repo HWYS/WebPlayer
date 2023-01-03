@@ -71,4 +71,3 @@ C:\Users\hwyswe\source\repos\Player\obj\Debug\Player.csproj.CoreCompileInputs.ca
 C:\Users\hwyswe\source\repos\Player\obj\Debug\Player.csproj.CopyComplete
 C:\Users\hwyswe\source\repos\Player\obj\Debug\Player.dll
 C:\Users\hwyswe\source\repos\Player\obj\Debug\Player.pdb
-C:\Users\hwyswe\source\repos\Player\obj\Debug\Player.csproj.AssemblyReference.cache
