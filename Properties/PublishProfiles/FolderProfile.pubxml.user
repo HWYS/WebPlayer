@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>C:\inetpub\wwwroot\WebPlayer</_PublishTargetUrl>
-    <History>True|2022-12-30T06:36:46.0143292Z;True|2022-12-30T14:16:20.5198019+08:00;False|2022-12-30T14:14:36.0284989+08:00;False|2022-12-30T14:04:42.1306542+08:00;False|2022-12-30T13:58:23.3495363+08:00;</History>
+    <_PublishTargetUrl>C:\Users\hwyswe\Documents\ASP Player\bin\Release\PublishOutput</_PublishTargetUrl>
+    <History>True|2023-01-03T07:50:22.2879780Z;True|2023-01-03T15:35:54.1459681+08:00;True|2023-01-03T14:13:23.9603033+08:00;False|2023-01-03T14:13:01.9055161+08:00;True|2023-01-03T13:57:45.2261794+08:00;True|2023-01-03T10:00:50.5070780+08:00;True|2022-12-30T14:36:46.0143292+08:00;True|2022-12-30T14:16:20.5198019+08:00;False|2022-12-30T14:14:36.0284989+08:00;False|2022-12-30T14:04:42.1306542+08:00;False|2022-12-30T13:58:23.3495363+08:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Admin.aspx">
@@ -15,7 +15,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/30/2022 10:12:39</publishTime>
     </File>
     <File Include="bin/App_Data/PlayerDb.sqlite">
-      <publishTime>12/30/2022 10:01:43</publishTime>
+      <publishTime>01/03/2023 15:35:17</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>01/03/2023 15:50:21</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>01/03/2023 15:50:21</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>04/17/2020 04:38:42</publishTime>
@@ -39,10 +45,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/28/2018 01:59:08</publishTime>
     </File>
     <File Include="bin/Player.dll">
-      <publishTime>12/30/2022 14:36:44</publishTime>
+      <publishTime>01/03/2023 15:41:55</publishTime>
     </File>
     <File Include="bin/Player.pdb">
-      <publishTime>12/30/2022 14:36:44</publishTime>
+      <publishTime>01/03/2023 15:41:55</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/08/2018 05:38:48</publishTime>
@@ -218,6 +224,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Data/Config.json">
       <publishTime>12/28/2022 15:15:59</publishTime>
     </File>
+    <File Include="Default.aspx">
+      <publishTime>01/03/2023 09:41:14</publishTime>
+    </File>
     <File Include="Global.asax">
       <publishTime>12/13/2022 11:55:22</publishTime>
     </File>
@@ -230,6 +239,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Player.aspx">
       <publishTime>12/27/2022 15:47:20</publishTime>
     </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>01/03/2023 15:50:17</publishTime>
+    </File>
     <File Include="Settings.aspx">
       <publishTime>12/30/2022 09:42:12</publishTime>
     </File>
@@ -240,7 +252,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/30/2022 08:49:10</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/30/2022 13:58:22</publishTime>
+      <publishTime>01/03/2023 10:00:45</publishTime>
     </File>
   </ItemGroup>
 </Project>

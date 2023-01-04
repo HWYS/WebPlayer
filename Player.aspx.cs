@@ -35,22 +35,32 @@ namespace Player
 
         private bool IsNeedToLogin()
         {
-            SettingDataAccess dataAccess = new SettingDataAccess();
+            /*SettingDataAccess dataAccess = new SettingDataAccess();
             List<SettingModel> model = dataAccess.GetSettings("SELECT * FROM Setting_Table;");
             if (model.Count > 0)
             {
                 return model[0].enableUserLogin;
+            }*/
+            ;
+
+            string filePath = Server.MapPath("~/Data/Settings.json");
+            List<SettingModel> settingModels = JsonConvert.DeserializeObject<List<SettingModel>>(System.IO.File.ReadAllText(filePath));
+
+            if (settingModels.Count > 0)
+            {
+                return settingModels[0].enableUserLogin;
             }
             return true;
         }
 
         private void getMetaData()
         {
-            string filePath = Server.MapPath("~/Data/Config.json");
-            //metaDataModels = JsonConvert.DeserializeObject<List<MetaDataModel>>(System.IO.File.ReadAllText(filePath));
+            string filePath = Server.MapPath("~/Data/MetaData.json");
+            metaDataModels = JsonConvert.DeserializeObject<List<MetaDataModel>>(System.IO.File.ReadAllText(filePath));
+            metaDataModels = metaDataModels.Where(x => x.isActive == true).ToList();
 
-            MetaDataDataAccess dataAccess = new MetaDataDataAccess();
-            metaDataModels = dataAccess.GetMetaDataModels("SELECT * FROM MetaData_Table WHERE is_active = 1;");
+            //MetaDataDataAccess dataAccess = new MetaDataDataAccess();
+            //metaDataModels = dataAccess.GetMetaDataModels("SELECT * FROM MetaData_Table WHERE is_active = 1;");
             hidMetaData.Value = JsonConvert.SerializeObject(metaDataModels, Formatting.Indented).ToString();
             bindDropDownList();
             
@@ -66,10 +76,10 @@ namespace Player
             if(channelDropDown.Items.Count > 0)
              channelDropDown.SelectedIndex = 0;
 
-            foreach (ListItem item in channelDropDown.Items)
+            /*foreach (ListItem item in channelDropDown.Items)
             {
                 item.Attributes.Add("class", "dropdown_item");
-            }
+            }*/
             //ClientScript.RegisterStartupScript(GetType(), "Javascript", "javascript:playVideo("+metaDataModels[0]+"); ", true);
             //channelLogo.Src = metaDataModels[0].logoSrc;
             

@@ -20,7 +20,7 @@
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a href="Admin.aspx">Metadata</a></li>
-                    <li><a href="Users.aspx">Users</a></li>
+                    <li><a href="User.aspx">Users</a></li>
                     <li class="active"><a href="Settings.aspx">Settings</a></li>
                 </ul>
             </div>
@@ -28,7 +28,7 @@
 
         <div class="container">
             <div class="form-check">
-                <asp:CheckBox runat="server" ID="chkIsLogin" class="form-check-input" Checked="true" Text="Admin Account" TextAlign="Right" />
+                <asp:CheckBox runat="server" ID="chkIsLogin" class="form-check-input" Checked="true" Text="Enable Login" TextAlign="Right" />
 
             </div>
 

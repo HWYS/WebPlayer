@@ -127,6 +127,7 @@
     <Compile Include="AdminLogin.aspx.designer.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="JSON_DataAccess\MetaDataAccess.cs" />
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -175,10 +176,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\Config.json" />
+    <Content Include="Data\MetaData.json" />
     <EmbeddedResource Include="App_Data\PlayerDb.sqlite">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <Content Include="Data\Users.json" />
+    <Content Include="Data\Settings.json" />
     <None Include="packages.config" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">

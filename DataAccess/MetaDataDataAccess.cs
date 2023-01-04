@@ -10,14 +10,16 @@ namespace Player.DataAccess
     public class MetaDataDataAccess
     {
         private static string connectionString = @"Data Source=PATH_TO_DB_FILE\...\file.ABC; Version=3; FailIfMissing=True; Foreign Keys=True;";
-
+        private string ConStr = "Data Source=" +
+        HttpContext.Current.Server.MapPath("App_Data\\PersonalExpenseDB.s3db") +
+                        ";Version=3;";
         public List<MetaDataModel> GetMetaDataModels(string query)
         {
             var result = new List<MetaDataModel>();
             if (string.IsNullOrEmpty(query.Trim()))
                 return null;
 
-            using (var con = new SQLiteConnection(@"Data Source="+ System.Web.HttpContext.Current.Server.MapPath(@"~\App_Data\PlayerDb.sqlite")))
+            using (var con = new SQLiteConnection(@"Data Source="+ System.Web.HttpContext.Current.Server.MapPath(@"~\App_Data\PlayerDb.sqlite; Version=3; FailIfMissing=True;")))
             {
                 con.Open();
                 using(var cmd = new SQLiteCommand(query, con))
