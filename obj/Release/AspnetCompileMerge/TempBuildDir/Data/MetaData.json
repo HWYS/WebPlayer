@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "dashSrc": "https://ucdn.starhubgo.com/bpk-tv/HubPremier1/output/manifest.mpd",
+    "hlsSrc": "https://ucdn.starhubgo.com/bpk-tv/HubPremier1/output/manifest.m3u8",
+    "logoSrc": "https://poster.starhubgo.com/Linear_Channels2/221_1920x1080_HTV.png",
+    "channelName": "Hub Premier 1",
+    "isActive": true
+  },
+  {
+    "id": 2,
+    "dashSrc": "https://ucdn.starhubgo.com/bpk-tv/HubPremier12/output/manifest.mpd",
+    "hlsSrc": "https://ucdn.starhubgo.com/bpk-tv/HubPremier12/output/manifest.m3u8",
+    "logoSrc": "https://poster.starhubgo.com/Linear_Channels2/222_1920x1080_HTV.png",
+    "channelName": "Hub Premier 2",
+    "isActive": true
+  },
+  {
+    "id": 3,
+    "dashSrc": "https://ucdn.starhubgo.com/bpk-tv/HubPremier3/output/manifest.mpd",
+    "hlsSrc": "https://ucdn.starhubgo.com/bpk-tv/HubPremier3/output/manifest.m3u8",
+    "logoSrc": "https://poster.starhubgo.com/Linear_Channels2/223_1920x1080_HTV.png",
+    "channelName": "Hub Premier 3",
+    "isActive": true
+  },
+  {
+    "id": 4,
+    "dashSrc": "https://ucdn.starhubgo.com/bpk-tv/HubPremier4/output/manifest.mpd",
+    "hlsSrc": "https://ucdn.starhubgo.com/bpk-tv/HubPremier4/output/manifest.m3u8",
+    "logoSrc": "https://poster.starhubgo.com/Linear_Channels4/222_1920x1080_HTV.png",
+    "channelName": "Hub Premier 4",
+    "isActive": true
+  },
+  {
+    "id": 5,
+    "dashSrc": "https://ucdn.starhubgo.com/bpk-tv/ONEHD/default/manifest.mpd",
+    "hlsSrc": "https://ucdn.starhubgo.com/bpk-tv/ONEHD/default/manifest.m3u8",
+    "logoSrc": "https://poster.starhubgo.com/Linear_channels2/124_1920x1080_HTV.png",
+    "channelName": "Test Channel",
+    "isActive": true
+  },
+  {
+    "id": 6,
+    "dashSrc": "https://testchannel.mpd",
+    "hlsSrc": "https://testchannel.m3u8",
+    "logoSrc": "https://testchannel.png",
+    "channelName": "Test Channel 2",
+    "isActive": false
+  }
+]

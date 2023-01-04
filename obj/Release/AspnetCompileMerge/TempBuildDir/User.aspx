@@ -20,7 +20,7 @@
                 </div>
                 <ul class="nav navbar-nav">
                     <li ><a href="Admin.aspx">Metadata</a></li>
-                    <li class="active"><a href="Users.aspx">Users</a></li>
+                    <li class="active"><a href="User.aspx">Users</a></li>
                     <li><a href="Settings.aspx">Settings</a></li>
                 </ul>
             </div>

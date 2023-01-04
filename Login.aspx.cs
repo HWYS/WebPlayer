@@ -1,4 +1,5 @@
-﻿using Player.DataAccess;
+﻿using Newtonsoft.Json;
+using Player.DataAccess;
 using Player.Models;
 using System;
 using System.Collections.Generic;
@@ -24,11 +25,15 @@ namespace Player
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            UserDataAccess dataAccess = new UserDataAccess();
-            List<UserModel> model = dataAccess.GetUsers("SELECT * FROM User_Table WHERE user_name ='" + txtUserName.Text + "' AND password= '" + encodePassword(txtPassword.Text) + "'");
-            if(model.Count > 0)
+            /*UserDataAccess dataAccess = new UserDataAccess();
+            List<UserModel> model = dataAccess.GetUsers("SELECT * FROM User_Table WHERE user_name ='" + txtUserName.Text + "' AND password= '" + encodePassword(txtPassword.Text) + "'");*/
+            string filePath = Server.MapPath("~/Data/Users.json");
+            List<UserModel> userModels = JsonConvert.DeserializeObject<List<UserModel>>(System.IO.File.ReadAllText(filePath));
+            UserModel model = userModels.Where(x => x.userName == txtUserName.Text && x.password == encodePassword(txtPassword.Text)).FirstOrDefault();
+
+            if (model != null)
             {
-                if (model[0].isAdmin)
+                if (model.isAdmin)
                     Session["isAdminLogin"] = true;
                 else
                     Session["isLogin"] = true;

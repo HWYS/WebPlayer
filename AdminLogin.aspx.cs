@@ -1,4 +1,5 @@
-﻿using Player.DataAccess;
+﻿using Newtonsoft.Json;
+using Player.DataAccess;
 using Player.Models;
 using System;
 using System.Collections.Generic;
@@ -24,16 +25,26 @@ namespace Player
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            UserDataAccess dataAccess = new UserDataAccess();
-            List<UserModel> model = dataAccess.GetUsers("SELECT * FROM User_Table WHERE user_name ='" + txtUserName.Text + "' AND password= '" + encodePassword(txtPassword.Text) + "'");
-            if(model.Count > 0)
-            {
-                if (model[0].isAdmin)
-                    Session["isAdminLogin"] = true;
-                else
-                    Session["isLogin"] = true;
+            /*UserDataAccess dataAccess = new UserDataAccess();
+            List<UserModel> model = dataAccess.GetUsers("SELECT * FROM User_Table WHERE user_name ='" + txtUserName.Text + "' AND password= '" + encodePassword(txtPassword.Text) + "'");*/
+            string filePath = Server.MapPath("~/Data/Users.json");
+            List<UserModel> userModels = JsonConvert.DeserializeObject<List<UserModel>>(System.IO.File.ReadAllText(filePath));
+            UserModel model = userModels.Where(x => x.userName == txtUserName.Text && x.password == encodePassword(txtPassword.Text)).FirstOrDefault();
 
-                Response.Redirect("Admin.aspx");
+            if (model != null)
+            {
+                if (model.isAdmin)
+                {
+                    Session["isAdminLogin"] = true;
+                    Response.Redirect("Admin.aspx");
+                }
+                    
+                else
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Only Admin account are allowed to login')", true);
+                }
+
+                
             }
             else
             {
