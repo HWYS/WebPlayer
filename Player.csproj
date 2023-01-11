@@ -96,6 +96,7 @@
     <Content Include="CSS\Fonts.css" />
     <Content Include="CSS\Style.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Dockerfile.txt" />
     <Content Include="Global.asax" />
     <Content Include="Images\logo.png" />
     <Content Include="AdminLogin.aspx" />
