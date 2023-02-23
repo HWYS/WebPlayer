@@ -3,7 +3,7 @@ SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPref
 RUN Remove-Website -Name 'Default Web Site'; \
     New-Website -Name 'Player' -PhysicalPath 'C:\inetpub\wwwroot' -Port 80 -Force
 WORKDIR /inetpub/wwwroot
-COPY .
+COPY ././
 
 
 
